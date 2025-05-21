@@ -977,7 +977,7 @@ def _real_main(argv=None):
     plugin_dirs.value = opts.plugin_dirs
     if plugin_dirs.value:
         _load_all_plugins()
-
+    print(f"options: {ydl_opts}")
     with YoutubeDL(ydl_opts) as ydl:
         pre_process = opts.update_self or opts.rm_cachedir
         actual_use = all_urls or opts.load_info_filename
