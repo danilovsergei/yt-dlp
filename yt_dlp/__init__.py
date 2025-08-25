@@ -935,6 +935,7 @@ def parse_options(argv=None):
         'sleep_interval_subtitles': opts.sleep_interval_subtitles,
         'external_downloader': opts.external_downloader,
         'download_ranges': opts.download_ranges,
+        'download_ranges_as_images': opts.download_ranges_as_images,
         'force_keyframes_at_cuts': opts.force_keyframes_at_cuts,
         'list_thumbnails': opts.list_thumbnails,
         'playlist_items': opts.playlist_items,

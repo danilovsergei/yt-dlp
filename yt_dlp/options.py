@@ -1158,7 +1158,11 @@ def create_parser():
             'For ffmpeg, arguments can be passed to different positions using the same syntax as --postprocessor-args. '
             'You can use this option multiple times to give different arguments to different downloaders '
             '(Alias: --external-downloader-args)'))
-
+    downloader.add_option(
+        '--download-ranges-as-images',
+        action='store_false', dest='download_ranges_as_images',
+        help='When download_ranges and download-ranges-as-images specified then ranges will be saved as images instead of video')
+    
     workarounds = optparse.OptionGroup(parser, 'Workarounds')
     workarounds.add_option(
         '--encoding',

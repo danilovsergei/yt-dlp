@@ -3076,6 +3076,8 @@ class YoutubeDL:
             for fmt, chapter in itertools.product(formats_to_download, requested_ranges):
                 new_info = self._copy_infodict(info_dict)
                 new_info.update(fmt)
+                if self.params.get('download_ranges_as_images'):
+                    new_info['ext'] = 'jpg'
                 offset, duration = info_dict.get('section_start') or 0, info_dict.get('duration') or float('inf')
                 end_time = offset + min(chapter.get('end_time', duration), duration)
                 # duration may not be accurate. So allow deviations <1sec
